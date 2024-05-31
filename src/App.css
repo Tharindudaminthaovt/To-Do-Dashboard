@@ -1,0 +1,177 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F5F5F5;
+  color: #000000;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.icon {
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 20px;
+}
+
+.icon_header {
+  vertical-align: middle;
+
+
+}
+
+.icon,
+.icon_header {
+  margin-right: 7px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 260px 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 3fr;
+  grid-template-areas:
+    'sidebar header header header'
+    'sidebar main main main ';
+  height: 100vh;
+
+}
+
+/*---Header---*/
+.header {
+  grid-area: header;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px 0 30px;
+  background-color: #fff;
+}
+
+.menu-icon {
+  display: none;
+}
+
+/*---End Header---*/
+
+/*---sidebar---*/
+#sidebar {
+  grid-area: sidebar;
+  height: 100vh;
+  background-color: #33074F;
+  overflow-y: auto;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  background-color: #451D5F;
+  box-shadow: 0 6px 0 -3px rgba(0, 0, 0, 0.65);
+  align-items: center;
+  color: #fff;
+  padding: 15px 20px 0px 30px;
+  margin-bottom: 30px;
+
+}
+
+.sidebar-title>span {
+  display: none;
+}
+
+.sidebar-brand {
+
+  margin-top: 15px;
+  font-size: 20px;
+
+}
+
+.sidebar-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.sidebar-list-item {
+  padding: 8px 20px 8px 20px;
+  margin: 0px 15px 0px 15px;
+  font-size: 18px;
+  border-radius: 24px;
+  background-color: #451D5F;
+
+}
+
+.sidebar-list-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.sidebar-list-item>a {
+
+  text-decoration: none;
+  color: #fff;
+}
+
+.icon.list {
+  margin-right: 15px;
+}
+
+.sidebar-responsive {
+  display: inline !important;
+  position: absolute;
+  /*need z-index of sidebar higher so charts are not showing 
+  over sidebar on small screens*/
+  z-index: 12 !important;
+}
+
+/*---End sidebar---*/
+
+/*---Home---*/
+.main-container {
+  /* margin: 10px 0px 10px 10px; */
+  grid-area: main;
+  overflow-y: auto;
+  padding: 20px 20px;
+}
+
+.top-welcome-card {
+  padding: 5px 0px 20px 20px;
+  height: 120px;
+  background-color: #fff;
+
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 2fr 1fr;
+  grid-template-areas: 
+    "task-list activity-feed"
+    "task-list chart";
+  gap: 10px;
+  margin-top: 40px;
+  height: 100%;
+}
+
+.task-list {
+  grid-area: task-list;
+  padding: 10px 10px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.activity-feed {
+  grid-area: activity-feed;
+  padding: 10px 10px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.chart {
+  display: grid;
+  grid-area: chart;
+  padding: 10px 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  
+}
+
+/*---End Home---*/
