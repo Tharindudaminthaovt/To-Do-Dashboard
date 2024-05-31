@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { BiSolidBellRing } from 'react-icons/bi';
+import { BiBellMinus, BiBellOff, BiBellPlus, BiDumbbell, BiSolidBellRing } from 'react-icons/bi';
 import ReactPaginate from 'react-paginate';
 
 const Fetch = ({ onDataFetched }) => {
@@ -74,7 +74,7 @@ const Fetch = ({ onDataFetched }) => {
             <tr key={task.id}>
               <td>
                 <span className="icon-box" style={{ backgroundColor: getIconColor(task.priority) }}>
-                  <BiSolidBellRing />
+                  <BiSolidBellRing className='bell-icon'/>
                 </span>
               </td>
 

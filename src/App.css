@@ -47,7 +47,23 @@ body {
 
 .menu-icon {
   display: none;
+  align-items: center;
+  justify-content: center;
 }
+
+.header-right {
+  display: flex;
+}
+
+.header-profile-icon {
+
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
 
 /*---End Header---*/
 
@@ -103,7 +119,7 @@ body {
   cursor: pointer;
 }
 
-.sidebar-list-item >.sidebar-dashboard-link {
+.sidebar-list-item>.sidebar-dashboard-link {
 
   text-decoration: none;
   color: #fff;
@@ -137,16 +153,29 @@ body {
   background-color: #fff;
 
 }
+
+.top-welcome-card h5 {
+  color: #9f9595;
+}
+
+.top-welcome-card h4,
+a {
+  color: #BC006D;
+
+}
+
 .task-table th:nth-child(4),
 .task-table td:nth-child(4) {
-  width: 100px; /* Fixed width for date */
+  width: 100px;
+  /* Fixed width for date */
   height: 75px;
   text-align: center;
 }
+
 .container {
   display: grid;
   grid-template-columns: 2.3fr 1fr;
-  grid-template-rows: 2fr 1fr;
+  grid-template-rows: 2fr 2fr;
   grid-template-areas:
     "task-list activity-feed"
     "task-list chart";
@@ -154,6 +183,7 @@ body {
   margin-top: 40px;
   height: 100%;
 }
+
 .task-table {
   width: 100%;
   border-collapse: collapse;
@@ -163,16 +193,20 @@ body {
   padding: 5px 10px;
   border-bottom: 1px solid #ddd;
 }
+
 .task-table th:first-child,
 .task-table td:first-child {
-  width: 5px; /* Adjust width for icon column */
+  width: 5px;
+  /* Adjust width for icon column */
 }
+
 .task-table th:nth-child(3),
 .task-table td:nth-child(3) {
-  width: 100px; /* Fixed width for status */
+  width: 100px;
+  /* Fixed width for status */
   text-align: center;
   position: relative;
-  
+
 }
 
 
@@ -184,11 +218,12 @@ body {
   border-radius: 8px;
 
 }
+
 /* Mark as done button */
-.mark-as-done-button{
+.mark-as-done-button {
   background: none;
   border: none;
-  color:#BC006D ;
+  color: #BC006D;
   font-weight: bold;
   padding: 0;
   cursor: pointer;
@@ -201,7 +236,7 @@ body {
   margin-top: 30px;
   border-radius: 15px;
   color: #219653;
-  border: none ;
+  border: none;
   background-color: #489a6b2b;
 }
 
@@ -210,21 +245,22 @@ body {
   margin-top: 30px;
   border-radius: 15px;
   color: #F2C94C;
-  border:none;
+  border: none;
   background-color: #f2c84c36;
 }
 
 /* list bell icon */
-.icon-box{
+.icon-box {
   display: inline-block;
   margin-bottom: 15px;
   padding: 6px;
   border: none;
-  border-radius: 6px; 
+  border-radius: 6px;
   color: #fff;
-  
+
 }
 
+/* -----Activity feed */
 .activity-feed {
   grid-area: activity-feed;
   padding: 10px 10px;
@@ -232,6 +268,43 @@ body {
   border-radius: 8px;
 }
 
+.activity-feed li {
+  text-decoration: none;
+  list-style: none;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+
+}
+
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.profile-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.activity-details {
+  flex: 1;
+}
+
+.activity-date {
+  font-size: 14px;
+  color: #888;
+}
+
+/* --------chart------- */
 .chart {
   display: grid;
   grid-area: chart;
