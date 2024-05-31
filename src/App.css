@@ -137,10 +137,15 @@ body {
   background-color: #fff;
 
 }
-
+.task-table th:nth-child(4),
+.task-table td:nth-child(4) {
+  width: 100px; /* Fixed width for date */
+  height: 75px;
+  text-align: center;
+}
 .container {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 2.3fr 1fr;
   grid-template-rows: 2fr 1fr;
   grid-template-areas:
     "task-list activity-feed"
@@ -149,6 +154,28 @@ body {
   margin-top: 40px;
   height: 100%;
 }
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.task-table td {
+  padding: 5px 10px;
+  border-bottom: 1px solid #ddd;
+}
+.task-table th:first-child,
+.task-table td:first-child {
+  width: 5px; /* Adjust width for icon column */
+}
+.task-table th:nth-child(3),
+.task-table td:nth-child(3) {
+  width: 100px; /* Fixed width for status */
+  text-align: center;
+  position: relative;
+  
+}
+
+
 
 .task-list {
   grid-area: task-list;
@@ -156,6 +183,44 @@ body {
   background-color: #fff;
   border-radius: 8px;
 
+}
+/* Mark as done button */
+.done-button{
+  background: none;
+  border: none;
+  color:#BC006D ;
+  font-weight: bold;
+  padding: 0;
+  cursor: pointer;
+}
+
+
+.Done {
+  display: inline-block;
+  margin-top: 30px;
+  border-radius: 15px;
+  color: #219653;
+  border: none ;
+  background-color: #489a6b2b;
+}
+
+.In-Progress {
+  display: inline-block;
+  margin-top: 30px;
+  border-radius: 15px;
+  color: #F2C94C;
+  border:none;
+  background-color: #f2c84c36;
+}
+
+/* list bell icon */
+.icon-box{
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid #fb0000;
+  border-radius: 6px; 
+  color: #fff;
+  background-color: #f90808; /
 }
 
 .activity-feed {

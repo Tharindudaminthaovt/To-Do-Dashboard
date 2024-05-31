@@ -1,5 +1,5 @@
 import React from 'react'
-import { BsFillBellFill,BsFillEnvelopeFill,BsPersonCircle,BsJustify, BsMenuDown, BsSortDownAlt, BsArrowDown, BsArrowsExpand, BsChevronExpand, BsChevronBarDown, BsChevronCompactDown, BsChevronDown } from 'react-icons/bs'
+import { BsFillBellFill,BsPersonCircle,BsJustify, BsMenuDown, BsArrowDown, BsArrowsExpand, BsChevronExpand, BsChevronBarDown, BsChevronCompactDown, BsChevronDown } from 'react-icons/bs'
 
 
 const Header = () => {

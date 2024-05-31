@@ -22,7 +22,7 @@ const Home = () => {
     setData(chartData);
   },[]);
 
-  const COLORS = ['#FF0000', '#FFFF00', '#0000FF'];
+  const COLORS = ['#FF0000', '#F2C94C', '#0000FF'];
 
   const RADIAN = Math.PI / 180;
   const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
@@ -43,7 +43,7 @@ const Home = () => {
         <h3>Welcome back,John Doe</h3>
 
         <h5>The end of the year is coming. Are you planning your performance interviews?You can do this super efficiently with Acmy. </h5>
-        <a href="#">
+        <a href="https://www.betalaunch.io/" target="_blank">
           <h4>Look here for more information</h4>
         </a>
       </div>
