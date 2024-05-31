@@ -156,8 +156,18 @@ body {
   padding: 10px 10px;
   background-color: #fff;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  
+  }
+.task-list-header {
+  flex-shrink: 0;
 }
-
+.task-list-content {
+  flex: 1;
+  overflow-y: auto;
+}
 .activity-feed {
   grid-area: activity-feed;
   padding: 10px 10px;

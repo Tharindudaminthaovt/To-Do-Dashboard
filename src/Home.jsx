@@ -1,6 +1,6 @@
 import React from 'react'
 import { PieChart, Pie, Cell,ResponsiveContainer} from 'recharts';
-
+import Fetch from './components/Fetch'
 
 const Home = () => {
 
@@ -37,14 +37,10 @@ const Home = () => {
       </div>
       <div className="container">
         <div className="task-list">
-          <h4>Tasks</h4>
-          <ul>
-            <li>Contract #00124 need John Beige’s signature</li>
-            <li>Contract #00124 need John Beige’s signature</li>
-            <li>Contract #00124 need John Beige’s signature</li>
-            <li>Contract #00124 need John Beige’s signature</li>
-            <li>Contract #00124 need John Beige’s signature</li>
-          </ul>
+          <h4 className="task-list-header">Tasks</h4>
+          <div className="task-list-content">
+            <Fetch />
+          </div>
         </div>
         <div className="activity-feed">
           <h4>Activity Feed</h4>
