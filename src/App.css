@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   padding: 0;
@@ -104,7 +103,7 @@ body {
   cursor: pointer;
 }
 
-.sidebar-list-item>a {
+.sidebar-list-item >.sidebar-dashboard-link {
 
   text-decoration: none;
   color: #fff;
@@ -143,7 +142,7 @@ body {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   grid-template-rows: 2fr 1fr;
-  grid-template-areas: 
+  grid-template-areas:
     "task-list activity-feed"
     "task-list chart";
   gap: 10px;
@@ -156,18 +155,9 @@ body {
   padding: 10px 10px;
   background-color: #fff;
   border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  
-  }
-.task-list-header {
-  flex-shrink: 0;
+
 }
-.task-list-content {
-  flex: 1;
-  overflow-y: auto;
-}
+
 .activity-feed {
   grid-area: activity-feed;
   padding: 10px 10px;
@@ -181,7 +171,59 @@ body {
   padding: 10px 10px;
   background-color: #fff;
   border-radius: 8px;
-  
+
 }
 
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination li {
+  margin: 0 5px;
+}
+
+.pagination li a {
+  border: 1px solid #ddd;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pagination li a:hover {
+  background-color: #ddd;
+}
+
+.pagination li.active a {
+  background-color: #ffffff;
+  color: #BC006D;
+  border: 1px solid #BC006D;
+}
+
+.pagination li.disabled a {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+
 /*---End Home---*/
+
+/*-----404 page--------*/
+
+
+.error-404 a {
+  text-decoration: none;
+  color: #451D5F;
+  font-weight: bold;
+}
+
+.error-404 a:hover {
+  text-decoration: underline;
+}
+
+/*-----End-404 page--------*/

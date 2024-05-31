@@ -1,6 +1,6 @@
 import React from 'react'
 import { BsCart3,BsGrid1X2Fill } from 'react-icons/bs'
-
+import { Link } from 'react-router-dom'
 
 const Sidebar = () => {
   return (
@@ -13,9 +13,10 @@ const Sidebar = () => {
             </div>
             <ul className="sidebar-list">
                 <li className="sidebar-list-item">
-                    <a href="#">
+                  
+                    <Link to='/' className="sidebar-dashboard-link">
                         <BsGrid1X2Fill className="icon list"/>Dashboard
-                    </a>
+                        </Link>
                 </li>
             </ul>
         

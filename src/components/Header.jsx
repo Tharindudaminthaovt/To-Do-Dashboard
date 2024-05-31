@@ -1,5 +1,5 @@
 import React from 'react'
-import { BsFillBellFill,BsFillEnvelopeFill,BsPersonCircle,BsSearch,BsJustify } from 'react-icons/bs'
+import { BsFillBellFill,BsFillEnvelopeFill,BsPersonCircle,BsJustify, BsMenuDown, BsSortDownAlt, BsArrowDown, BsArrowsExpand, BsChevronExpand, BsChevronBarDown, BsChevronCompactDown, BsChevronDown } from 'react-icons/bs'
 
 
 const Header = () => {
@@ -14,7 +14,7 @@ const Header = () => {
         <div className="header-right">
             <BsFillBellFill className='icon' />
             <BsPersonCircle className='icon'/>
-            <BsFillEnvelopeFill className='icon'/>
+            <BsChevronDown className='icon'/>
         </div>
         
     </header>
