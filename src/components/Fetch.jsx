@@ -21,6 +21,14 @@ const Fetch = ({ onDataFetched }) => {
     return `${month} ${day}`; // Return formatted date
   };
 
+  //------To change bell icon color based on priority
+  const getIconColor = (value) => {
+    if (value === 'HIGH') return '#FF0000';
+    if (value === 'MEDIUM') return '#F2C94C';
+    if (value === 'LOW') return '#0000FF';
+    return 'black'; // Default color
+  };
+
   useEffect(() => {
     fetch('https://6363c8f68a3337d9a2e7d805.mockapi.io/api/to-do')
       .then((res) => {
@@ -56,6 +64,7 @@ const Fetch = ({ onDataFetched }) => {
   if (error) {
     return <div>Error: {error.message}</div>;
   }
+
   return (
     <div>
       <table className="task-table">
@@ -64,14 +73,14 @@ const Fetch = ({ onDataFetched }) => {
           {currentPageData.map((task) => (
             <tr key={task.id}>
               <td>
-                <span className="icon-box">
+                <span className="icon-box" style={{ backgroundColor: getIconColor(task.priority) }}>
                   <BiSolidBellRing />
                 </span>
               </td>
 
               <td>
                 {task.todo}<br />
-                {!task.completed && <button className='done-button'>Mark as done</button>}
+                {!task.completed && <button className='mark-as-done-button'>Mark as done</button>}
 
               </td>
 
